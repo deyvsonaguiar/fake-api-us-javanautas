@@ -1,6 +1,6 @@
 package com.deyvsonaguiar.fakeapius.apiv1.dto;
 
-import com.deyvsonaguiar.fakeapius.business.FakeApiService;
+import com.deyvsonaguiar.fakeapius.business.services.FakeApiService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;

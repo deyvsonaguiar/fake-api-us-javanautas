@@ -1,4 +1,4 @@
-package com.deyvsonaguiar.fakeapius.infrastructure;
+package com.deyvsonaguiar.fakeapius.infrastructure.clients;
 
 import com.deyvsonaguiar.fakeapius.apiv1.dto.ProductDTO;
 import org.springframework.cloud.openfeign.FeignClient;

@@ -13,6 +13,8 @@ import java.math.BigDecimal;
 public class ProductDTO {
     @JsonProperty(value = "id")
     private Long id;
+    @JsonProperty(value = "entity_id")
+    private String entityId;
     @JsonProperty(value = "title")
     private String nome;
     @JsonProperty(value = "price")
