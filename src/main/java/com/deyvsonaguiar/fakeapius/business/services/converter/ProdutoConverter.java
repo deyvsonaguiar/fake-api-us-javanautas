@@ -12,7 +12,7 @@ public class ProdutoConverter {
 
     public ProdutoEntity toEntity(ProductDTO dto) {
         return ProdutoEntity.builder()
-                .id(Long.valueOf(String.valueOf(UUID.randomUUID())))
+                .id(String.valueOf(UUID.randomUUID()))
                 .nome(dto.getNome())
                 .preco(dto.getPreco())
                 .categoria(dto.getCategoria())
@@ -21,7 +21,7 @@ public class ProdutoConverter {
                 .build();
     }
 
-    public ProductDTO toEntity(ProdutoEntity entity) {
+    public ProductDTO toDTO(ProdutoEntity entity) {
         return ProductDTO.builder()
                 .entityId(String.valueOf(entity.getId()))
                 .nome(entity.getNome())
@@ -33,6 +33,6 @@ public class ProdutoConverter {
     }
 
     public List<ProductDTO> toListDTO(List<ProdutoEntity> listEntity) {
-        return listEntity.stream().map(this::toEntity).toList();
+        return listEntity.stream().map(this::toDTO).toList();
     }
 }

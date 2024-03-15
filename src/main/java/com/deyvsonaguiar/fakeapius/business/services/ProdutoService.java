@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+import static java.lang.String.format;
+
 @Service
 @RequiredArgsConstructor
 public class ProdutoService {
@@ -17,7 +19,7 @@ public class ProdutoService {
         try{
             return repository.save(entity);
         } catch( Exception e) {
-            throw new RuntimeException("Erro ao salvar produto.");
+            throw new RuntimeException("Erro ao salvar produto." + e);
         }
     }
 
@@ -33,7 +35,7 @@ public class ProdutoService {
         try{
             return repository.existsByNome(nome);
         } catch(Exception e) {
-            throw new RuntimeException(String.format("Erro ao buscar produtos por nome." + nome) + e);
+            throw new RuntimeException(format("Erro ao buscar produtos por nome." + nome), e);
         }
     }
 }

@@ -20,8 +20,7 @@ public class ProdutoEntity {
 
     @Id
     @Column(name = "id")
-    private Long id;
-
+    private String id;
     @Column(name = "title", length = 800)
     private String nome;
     @Column(name = "price")
