@@ -33,4 +33,6 @@ public class ProdutoEntity {
     private String imagem;
     @Column(name = "created_at")
     private LocalDateTime dataCriacao;
+    @Column(name = "updated_at")
+    private LocalDateTime dataAtualizacao;
 }

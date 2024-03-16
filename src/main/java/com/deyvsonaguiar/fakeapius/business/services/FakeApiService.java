@@ -25,7 +25,7 @@ public class FakeApiService {
                     service.salvarProduto(converter.toEntity(produto));
                 }
             });
-            return converter.toListDTO(service.buscarTodosProdutos());
+            return service.buscaTodosProdutos();
         } catch (Exception e) {
             throw new RuntimeException("Erro ao cadastrar produto." + e);
         }
